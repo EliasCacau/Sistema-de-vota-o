@@ -40,9 +40,12 @@ def consultar(consultar):
     cursor = con.cursor()
     cursor.execute(consultar)
     valores = cursor.fetchall()
+    #print(valores[1][1])
     for i in valores:
-        print(i, end=" ")
-        print()
+        print(i)
+        #print(i, end=" ")
+        #print()
+    return valores
 
 # query = 'INSERT INTO usuario ("nome", "user_name", "senha", "tipo", "status") VALUES ("Elias de Oliveira Cacau", "EliasCacau", "123", "Usuário", 0);'
 # query = 'INSERT INTO candidato ("nome", "num_candidato", "votos") VALUES ("Elias de Oliveira Cacau", "4002", 0);'
@@ -56,5 +59,5 @@ def consultar(consultar):
 # delete = 'DELETE FROM usuario WHERE id=2;'
 # deletar(delete)
 
-# show = 'SELECT * FROM usuario;'
-# consultar(show)
+#show = 'SELECT user_name, senha FROM usuario;'
+#consultar(show)
